@@ -41,7 +41,7 @@ namespace PresentationLayer
             {
             try
                 {
-                Post createdPost = new Post(null, titleEntered);
+                Post createdPost = new Post(userLoggedIn, titleEntered);
                 createdPost.Content = contentEntered;
                 _postController.Create(createdPost);             
                 MessageBox.Show("Post created successfully!");
