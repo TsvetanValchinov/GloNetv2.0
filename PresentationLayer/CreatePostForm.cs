@@ -41,7 +41,7 @@ namespace PresentationLayer
             {
             try
                 {
-                Post createdPost = new Post(null, titleEntered);
+                Post createdPost = new Post(userLoggedIn, titleEntered);
                 createdPost.Content = contentEntered;
                 _postController.Create(createdPost);             
                 MessageBox.Show("Post created successfully!");
@@ -50,6 +50,14 @@ namespace PresentationLayer
                 {
                 throw ex;
                 }
+            }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+            {
+            UserProfileForm userProfileForm = new UserProfileForm(userLoggedIn.Username);
+            this.Hide();
+            userProfileForm.Show();
+            this.Close();
             }
         }
     }

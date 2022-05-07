@@ -27,7 +27,7 @@ namespace BusinessLayer
 
         public DateTime Created_On { get; set; }
 
-        public DateTime Updated_On { get; set; }
+        public DateTime? Updated_On { get; set; }
 
         public bool IsVisible { get; set; }// in the constructor it is initialized as true (default-true)
 

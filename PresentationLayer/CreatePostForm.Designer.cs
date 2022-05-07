@@ -35,6 +35,7 @@ namespace PresentationLayer
             this.ContentLabel = new System.Windows.Forms.Label();
             this.ContentTextBox = new System.Windows.Forms.TextBox();
             this.CreatePostButton = new System.Windows.Forms.Button();
+            this.GoBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UsernameLabel
@@ -90,11 +91,22 @@ namespace PresentationLayer
             this.CreatePostButton.UseVisualStyleBackColor = true;
             this.CreatePostButton.Click += new System.EventHandler(this.CreatePostButton_Click);
             // 
+            // GoBackButton
+            // 
+            this.GoBackButton.Location = new System.Drawing.Point(26, 23);
+            this.GoBackButton.Name = "GoBackButton";
+            this.GoBackButton.Size = new System.Drawing.Size(56, 29);
+            this.GoBackButton.TabIndex = 6;
+            this.GoBackButton.Text = "Back";
+            this.GoBackButton.UseVisualStyleBackColor = true;
+            this.GoBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
+            // 
             // CreatePostForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GoBackButton);
             this.Controls.Add(this.CreatePostButton);
             this.Controls.Add(this.ContentTextBox);
             this.Controls.Add(this.ContentLabel);
@@ -116,5 +128,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Label ContentLabel;
         private System.Windows.Forms.TextBox ContentTextBox;
         private System.Windows.Forms.Button CreatePostButton;
+        private System.Windows.Forms.Button GoBackButton;
         }
     }
