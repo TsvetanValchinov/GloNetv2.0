@@ -152,5 +152,16 @@ namespace ServiceLayer.Controllers
                 }
             return null;
             }
+
+        public Post GetLastPost(User user)
+            {
+            if(user.Posts == null)
+                {
+                return null;
+                }
+            List<Post> posts = user.Posts.ToList();
+            Post lastPost = (Post)posts.OrderByDescending(p => p.Created_On).First();
+            return lastPost;
+            }
         }
     }
