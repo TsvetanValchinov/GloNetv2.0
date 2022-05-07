@@ -39,6 +39,13 @@ namespace PresentationLayer
             this.SearchButton = new System.Windows.Forms.Button();
             this.UpdateProfileButton = new System.Windows.Forms.Button();
             this.CreateNewPostButton = new System.Windows.Forms.Button();
+            this.LastPostLabel = new System.Windows.Forms.Label();
+            this.LastPostTitleLabel = new System.Windows.Forms.Label();
+            this.LastPostContentLabel = new System.Windows.Forms.Label();
+            this.LastPostTitleTextBox = new System.Windows.Forms.TextBox();
+            this.LastPostContentTextBox = new System.Windows.Forms.RichTextBox();
+            this.VerticalLine = new System.Windows.Forms.Label();
+            this.CommentsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SearchLabel
@@ -139,11 +146,78 @@ namespace PresentationLayer
             this.CreateNewPostButton.UseVisualStyleBackColor = true;
             this.CreateNewPostButton.Click += new System.EventHandler(this.CreateNewPostButton_Click);
             // 
+            // LastPostLabel
+            // 
+            this.LastPostLabel.AutoSize = true;
+            this.LastPostLabel.Location = new System.Drawing.Point(40, 228);
+            this.LastPostLabel.Name = "LastPostLabel";
+            this.LastPostLabel.Size = new System.Drawing.Size(71, 20);
+            this.LastPostLabel.TabIndex = 10;
+            this.LastPostLabel.Text = "Last post:";
+            // 
+            // LastPostTitleLabel
+            // 
+            this.LastPostTitleLabel.AutoSize = true;
+            this.LastPostTitleLabel.Location = new System.Drawing.Point(40, 273);
+            this.LastPostTitleLabel.Name = "LastPostTitleLabel";
+            this.LastPostTitleLabel.Size = new System.Drawing.Size(41, 20);
+            this.LastPostTitleLabel.TabIndex = 11;
+            this.LastPostTitleLabel.Text = "Title:";
+            // 
+            // LastPostContentLabel
+            // 
+            this.LastPostContentLabel.AutoSize = true;
+            this.LastPostContentLabel.Location = new System.Drawing.Point(40, 317);
+            this.LastPostContentLabel.Name = "LastPostContentLabel";
+            this.LastPostContentLabel.Size = new System.Drawing.Size(64, 20);
+            this.LastPostContentLabel.TabIndex = 12;
+            this.LastPostContentLabel.Text = "Content:";
+            // 
+            // LastPostTitleTextBox
+            // 
+            this.LastPostTitleTextBox.Location = new System.Drawing.Point(138, 270);
+            this.LastPostTitleTextBox.Name = "LastPostTitleTextBox";
+            this.LastPostTitleTextBox.Size = new System.Drawing.Size(196, 27);
+            this.LastPostTitleTextBox.TabIndex = 13;
+            // 
+            // LastPostContentTextBox
+            // 
+            this.LastPostContentTextBox.Location = new System.Drawing.Point(138, 317);
+            this.LastPostContentTextBox.Name = "LastPostContentTextBox";
+            this.LastPostContentTextBox.Size = new System.Drawing.Size(196, 91);
+            this.LastPostContentTextBox.TabIndex = 14;
+            this.LastPostContentTextBox.Text = "";
+            // 
+            // VerticalLine
+            // 
+            this.VerticalLine.AutoSize = true;
+            this.VerticalLine.Location = new System.Drawing.Point(380, 222);
+            this.VerticalLine.Name = "VerticalLine";
+            this.VerticalLine.Size = new System.Drawing.Size(13, 220);
+            this.VerticalLine.TabIndex = 15;
+            this.VerticalLine.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n";
+            // 
+            // CommentsLabel
+            // 
+            this.CommentsLabel.AutoSize = true;
+            this.CommentsLabel.Location = new System.Drawing.Point(420, 228);
+            this.CommentsLabel.Name = "CommentsLabel";
+            this.CommentsLabel.Size = new System.Drawing.Size(83, 20);
+            this.CommentsLabel.TabIndex = 16;
+            this.CommentsLabel.Text = "Comments:";
+            // 
             // UserProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 451);
+            this.Controls.Add(this.CommentsLabel);
+            this.Controls.Add(this.VerticalLine);
+            this.Controls.Add(this.LastPostContentTextBox);
+            this.Controls.Add(this.LastPostTitleTextBox);
+            this.Controls.Add(this.LastPostContentLabel);
+            this.Controls.Add(this.LastPostTitleLabel);
+            this.Controls.Add(this.LastPostLabel);
             this.Controls.Add(this.CreateNewPostButton);
             this.Controls.Add(this.UpdateProfileButton);
             this.Controls.Add(this.SearchButton);
@@ -172,5 +246,12 @@ namespace PresentationLayer
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button UpdateProfileButton;
         private System.Windows.Forms.Button CreateNewPostButton;
+        private System.Windows.Forms.Label LastPostLabel;
+        private System.Windows.Forms.Label LastPostTitleLabel;
+        private System.Windows.Forms.Label LastPostContentLabel;
+        private System.Windows.Forms.TextBox LastPostTitleTextBox;
+        private System.Windows.Forms.RichTextBox LastPostContentTextBox;
+        private System.Windows.Forms.Label VerticalLine;
+        private System.Windows.Forms.Label CommentsLabel;
         }
     }
