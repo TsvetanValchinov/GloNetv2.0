@@ -22,7 +22,7 @@ namespace BusinessLayer
         /*[ForeignKey("User")]
         public int UserID { get; set; }*/
 
-        [Required]
+        [Required, ForeignKey("UserID")]
         public User User { get; set; }
 
         public DateTime Created_On { get; set; }
