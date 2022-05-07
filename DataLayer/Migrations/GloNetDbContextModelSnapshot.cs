@@ -95,7 +95,7 @@ namespace DataLayer.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<DateTime>("Updated_On")
+                    b.Property<DateTime?>("Updated_On")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserID")

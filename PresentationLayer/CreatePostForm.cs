@@ -51,5 +51,13 @@ namespace PresentationLayer
                 throw ex;
                 }
             }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+            {
+            UserProfileForm userProfileForm = new UserProfileForm(userLoggedIn.Username);
+            this.Hide();
+            userProfileForm.Show();
+            this.Close();
+            }
         }
     }
