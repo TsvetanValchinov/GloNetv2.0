@@ -40,12 +40,12 @@ namespace PresentationLayer
             this.UpdateProfileButton = new System.Windows.Forms.Button();
             this.CreateNewPostButton = new System.Windows.Forms.Button();
             this.LastPostLabel = new System.Windows.Forms.Label();
-            this.LastPostTitleLabel = new System.Windows.Forms.Label();
-            this.LastPostContentLabel = new System.Windows.Forms.Label();
-            this.LastPostTitleTextBox = new System.Windows.Forms.TextBox();
-            this.LastPostContentTextBox = new System.Windows.Forms.RichTextBox();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.ContentLabel = new System.Windows.Forms.Label();
             this.VerticalLine = new System.Windows.Forms.Label();
             this.CommentsLabel = new System.Windows.Forms.Label();
+            this.lastPostTitleLabel = new System.Windows.Forms.Label();
+            this.LastPostContentLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SearchLabel
@@ -155,38 +155,23 @@ namespace PresentationLayer
             this.LastPostLabel.TabIndex = 10;
             this.LastPostLabel.Text = "Last post:";
             // 
-            // LastPostTitleLabel
+            // TitleLabel
             // 
-            this.LastPostTitleLabel.AutoSize = true;
-            this.LastPostTitleLabel.Location = new System.Drawing.Point(40, 273);
-            this.LastPostTitleLabel.Name = "LastPostTitleLabel";
-            this.LastPostTitleLabel.Size = new System.Drawing.Size(41, 20);
-            this.LastPostTitleLabel.TabIndex = 11;
-            this.LastPostTitleLabel.Text = "Title:";
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Location = new System.Drawing.Point(40, 273);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(41, 20);
+            this.TitleLabel.TabIndex = 11;
+            this.TitleLabel.Text = "Title:";
             // 
-            // LastPostContentLabel
+            // ContentLabel
             // 
-            this.LastPostContentLabel.AutoSize = true;
-            this.LastPostContentLabel.Location = new System.Drawing.Point(40, 317);
-            this.LastPostContentLabel.Name = "LastPostContentLabel";
-            this.LastPostContentLabel.Size = new System.Drawing.Size(64, 20);
-            this.LastPostContentLabel.TabIndex = 12;
-            this.LastPostContentLabel.Text = "Content:";
-            // 
-            // LastPostTitleTextBox
-            // 
-            this.LastPostTitleTextBox.Location = new System.Drawing.Point(138, 270);
-            this.LastPostTitleTextBox.Name = "LastPostTitleTextBox";
-            this.LastPostTitleTextBox.Size = new System.Drawing.Size(196, 27);
-            this.LastPostTitleTextBox.TabIndex = 13;
-            // 
-            // LastPostContentTextBox
-            // 
-            this.LastPostContentTextBox.Location = new System.Drawing.Point(138, 317);
-            this.LastPostContentTextBox.Name = "LastPostContentTextBox";
-            this.LastPostContentTextBox.Size = new System.Drawing.Size(196, 91);
-            this.LastPostContentTextBox.TabIndex = 14;
-            this.LastPostContentTextBox.Text = "";
+            this.ContentLabel.AutoSize = true;
+            this.ContentLabel.Location = new System.Drawing.Point(40, 317);
+            this.ContentLabel.Name = "ContentLabel";
+            this.ContentLabel.Size = new System.Drawing.Size(64, 20);
+            this.ContentLabel.TabIndex = 12;
+            this.ContentLabel.Text = "Content:";
             // 
             // VerticalLine
             // 
@@ -206,17 +191,34 @@ namespace PresentationLayer
             this.CommentsLabel.TabIndex = 16;
             this.CommentsLabel.Text = "Comments:";
             // 
+            // lastPostTitleLabel
+            // 
+            this.lastPostTitleLabel.AutoSize = true;
+            this.lastPostTitleLabel.Location = new System.Drawing.Point(110, 273);
+            this.lastPostTitleLabel.Name = "lastPostTitleLabel";
+            this.lastPostTitleLabel.Size = new System.Drawing.Size(0, 20);
+            this.lastPostTitleLabel.TabIndex = 17;
+            // 
+            // LastPostContentLabel
+            // 
+            this.LastPostContentLabel.AutoSize = true;
+            this.LastPostContentLabel.Location = new System.Drawing.Point(110, 317);
+            this.LastPostContentLabel.MaximumSize = new System.Drawing.Size(269, 120);
+            this.LastPostContentLabel.Name = "LastPostContentLabel";
+            this.LastPostContentLabel.Size = new System.Drawing.Size(0, 20);
+            this.LastPostContentLabel.TabIndex = 18;
+            // 
             // UserProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 451);
+            this.Controls.Add(this.LastPostContentLabel);
+            this.Controls.Add(this.lastPostTitleLabel);
             this.Controls.Add(this.CommentsLabel);
             this.Controls.Add(this.VerticalLine);
-            this.Controls.Add(this.LastPostContentTextBox);
-            this.Controls.Add(this.LastPostTitleTextBox);
-            this.Controls.Add(this.LastPostContentLabel);
-            this.Controls.Add(this.LastPostTitleLabel);
+            this.Controls.Add(this.ContentLabel);
+            this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.LastPostLabel);
             this.Controls.Add(this.CreateNewPostButton);
             this.Controls.Add(this.UpdateProfileButton);
@@ -247,11 +249,11 @@ namespace PresentationLayer
         private System.Windows.Forms.Button UpdateProfileButton;
         private System.Windows.Forms.Button CreateNewPostButton;
         private System.Windows.Forms.Label LastPostLabel;
-        private System.Windows.Forms.Label LastPostTitleLabel;
-        private System.Windows.Forms.Label LastPostContentLabel;
-        private System.Windows.Forms.TextBox LastPostTitleTextBox;
-        private System.Windows.Forms.RichTextBox LastPostContentTextBox;
+        private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Label ContentLabel;
         private System.Windows.Forms.Label VerticalLine;
         private System.Windows.Forms.Label CommentsLabel;
+        private System.Windows.Forms.Label lastPostTitleLabel;
+        private System.Windows.Forms.Label LastPostContentLabel;
         }
     }

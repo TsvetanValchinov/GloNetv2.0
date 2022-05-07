@@ -16,6 +16,7 @@ namespace PresentationLayer
         UserController _userController = new UserController(DbContextController.CreateContext());
          User userLoggedIn;
         string usernameSearched;
+        Post lastPost;
 
         public UserProfileForm()
             {
@@ -32,7 +33,13 @@ namespace PresentationLayer
             {
             this.Text = userLoggedIn.Username;
             this.UsernameLabel.Text = userLoggedIn.Username;
-            this.postsLabel.Text = "Posts: " + GetUserPostsNumber(); 
+            this.postsLabel.Text = "Posts: " + GetUserPostsNumber();
+            this.lastPost = _userController.GetLastPost(userLoggedIn);
+            if(lastPost !=null)
+                {
+                this.lastPostTitleLabel.Text = lastPost.Title;
+                this.LastPostContentLabel.Text = lastPost.Content;
+                }          
             }
 
         private void SeeAllPostsButton_Click(object sender, EventArgs e)
